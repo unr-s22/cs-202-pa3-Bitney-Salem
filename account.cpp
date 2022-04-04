@@ -29,3 +29,23 @@ double Account::getBalance(){
 		return balance/100.0;
 	}
 }
+
+std::ostream &operator<< (std::ostream &out, Account account){
+		out<<"Account Details"<<std::endl;
+		out<<"--------------------------"<< std::endl;
+		out<<std::fixed<<std::setprecision(2)<<"Current Balance: $"<<account.getBalance()<<std::endl;
+		out<<"--------------------------" <<std::endl;
+		out<<"Number of Deposits: "<<account.deposits.size()<<std::endl;
+		out<<"--------------------"<<std::endl;
+		for (int i = 0; i < account.deposits.size(); i++){
+			out<<"("<<i+1<<") "<<account.deposits.at(i)<<std::endl;
+		}
+		out<<"--------------------------"<<std::endl;
+		out<<"Number of Withdrawals: "<<account.withdrawals.size()<<std::endl;
+		out<<"--------------------------"<<std::endl;
+		for (int i = 0; i < account.withdrawals.size(); i++){
+			out<<"("<<i+1<<") "<<account.withdrawals.at(i)<<std::endl;
+		}
+		out<<"----";
+		return out;
+  }

@@ -10,18 +10,18 @@ int main() {
 	Money mon(300,23), mo(200,0), mou(300,24), mone(501,22), moni(300,10), mun(201,34);
 	Account newAcc(mon);
 
-	std::cout << newAcc.getBalance() << std::endl;
+	std::cout << newAcc << std::endl;
 
 	newAcc.makeDeposit(mo);
 	newAcc.makeDeposit(mou);
 	newAcc.makeDeposit(mone);
 
-	std::cout << newAcc.getBalance() << std::endl;
+	std::cout << newAcc << std::endl;
 
 	newAcc.makeWithdrawal(moni);
 	newAcc.makeWithdrawal(mun);
 	
-	std::cout << newAcc.getBalance() << std::endl;
+	std::cout << newAcc << std::endl;
 
 	//testing overloaded operators
 	Money m(100,33);

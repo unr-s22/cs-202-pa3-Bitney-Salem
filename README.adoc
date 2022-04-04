@@ -72,7 +72,7 @@ Number of Withdrawals: 1
 (1) $200.44
 ----
 
-[NOTE]
+[gitNOTE]
 --
 * Since the overload of << in the `Money` class includes a $ in the printout, you do not need one in the `Account` overload.
 --
